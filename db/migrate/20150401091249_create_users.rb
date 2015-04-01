@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :url, null: false
       t.string :handle, null: false, unique: true
       t.text :bio, null: false
+      t.references :neighbourhood, null: false
 
       t.timestamps null: false
     end

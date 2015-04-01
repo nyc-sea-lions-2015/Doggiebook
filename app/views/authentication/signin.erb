@@ -1,0 +1,15 @@
+<div>
+
+  <% if session[:message] %>
+    <%= session[:message]%>
+    <% session[:message].clear %>
+  <% end %>
+
+  <form action='/authentication/login' method='post'>
+    <br>
+    <br>
+    <input type='text' name='handle' placeholder='HANDLE'/><br>
+    <input type='password' name='password' placeholder='PASSWORD'/><br>
+    <input class="btn btn-default"  type='submit' value='signin'/>
+  </form>
+</div>
