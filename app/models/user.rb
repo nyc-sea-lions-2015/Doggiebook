@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_secure_password
+  belongs_to :neighbourhood
 end
