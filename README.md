@@ -1,3 +1,9 @@
+The following image entails the schema....
+  ![alt text](/public/img/schema.jpg "Schema")
+
+The following image entails the Plan of execution...
+  ![alt text](/public/img/plan.jpg "User Stories")
+
 ### Purpose and Overview
 The following challenge is for you to demonstrate everything you've learned so far in phase 2.
 
