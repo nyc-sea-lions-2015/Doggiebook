@@ -1,0 +1,31 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Doggiebook</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
+
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown">
+          <%= current_user.handle.capitalize %> <i class="caret"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/users/<%= current_user.id %>"></i> Dashboard</a></li>
+            <li class="divider divider-overide"></li>
+            <li><a href=""></i> Option2</a></li>
+            <li class="divider divider-overide"></li>
+            <li><a href="#"></i> Account</a></li>
+            <li class="divider divider-overide"></li>
+            <li><a href="/authentication/logout"></i> Sign-out</a></li>
+          </ul>
+        </div>
+
+        <% else %>
+        <li class="login_button"><a>Login</a></li>
+        <li class="signup_button"><a>SignUp</a></li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+   $(".login_button").click(function(){
+        $(".login").toggle();
+    });
+
+     $(".signup_button").click(function(){
+        $(".signup").toggle();
+    });
+
    $("#edit_button").click(function(){
         $("#edit_form").toggle();
     });
