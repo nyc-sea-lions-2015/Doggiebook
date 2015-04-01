@@ -1,0 +1,6 @@
+<h1> These are the profiles in your Neighbourhoods </h1>
+<div>
+<% @neighbourhood_profiles.each do |profile| %>
+<a href="/users/<%= profile.id%>"><%= profile.handle %></a>
+<% end %>
+</div>
