@@ -1,39 +1,50 @@
-    <div class="container">
-      <div>
-        <ul>
-          <li class="login_button"><a>Login</a></li>
-          <li class="signup_button"><a>SignUp</a></li>
-        </ul>
+    <div class="intro-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+          </div>
+        </div>
+
       </div>
-      <br>
+    </div>
 
 
+    <div class="container" style="margin-top: 10px">
+      <% if current_user %>
       <div class="well">
         <% @neighbourhoods.each do |neighbourhood| %>
         <a href="/neighbourhoods/<%= neighbourhood.id%>"><%= neighbourhood.name %></a><br>
         <% end %>
       </div>
-
-        <div class="login">
-        <form action='/authentication/login' method='post'>
-          <input class="form-control" type='text' name='handle' placeholder='HANDLE'/><br>
-          <input class="form-control" type='password' name='password' placeholder='PASSWORD'/><br>
-          <input class="btn btn-default"  type='submit' value='signin'/>
-        </form>
-        </div>
-      <br>
-
-        <div class="signup">
-          <form action='/authentication/register_user' method='post'>
-            <input class="form-control" type='text' name='first_name' placeholder='FIRSTNAME'/><br>
-            <input class="form-control" type='text' name='last_name' placeholder='LASTNAME'/><br>
-            <input class="form-control" type='text' name='email' placeholder='EMAIL'/><br>
-            <input class="form-control" type='text' name='handle' placeholder='HANDLE'/><br>
-            <input class="form-control" type='text' name='password' placeholder='PASSWORD'/><br>
-            <input class="form-control" type='text' name='password_confirm' placeholder='PASSWORD'/><br>
-            <input class="form-control" type='text' name='bio' placeholder='USER BIO'/><br>
-            <input class="form-control" type='text' name='neighbourhood_id' placeholder='NEIGHBOURHOOD'/><br>
-            <input class="btn btn-default"  type='submit' value='sign up'/>
-          </form>
-        </div>
     </div>
+    <% else %>
+    <div class="well">
+      <% @neighbourhoods.each do |neighbourhood| %>
+      <a href="/authentication/signin"><%= neighbourhood.name %></a><br>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="login">
+    <form action='/authentication/login' method='post'>
+      <input class="form-control" type='text' name='handle' placeholder='HANDLE'/><br>
+      <input class="form-control" type='password' name='password' placeholder='PASSWORD'/><br>
+      <input class="btn btn-default"  type='submit' value='signin'/>
+    </form>
+  </div>
+  <br>
+
+  <div class="signup">
+    <form action='/authentication/register_user' method='post'>
+      <input class="form-control" type='text' name='first_name' placeholder='FIRSTNAME'/><br>
+      <input class="form-control" type='text' name='last_name' placeholder='LASTNAME'/><br>
+      <input class="form-control" type='text' name='email' placeholder='EMAIL'/><br>
+      <input class="form-control" type='text' name='handle' placeholder='HANDLE'/><br>
+      <input class="form-control" type='text' name='password' placeholder='PASSWORD'/><br>
+      <input class="form-control" type='text' name='password_confirm' placeholder='PASSWORD'/><br>
+      <input class="form-control" type='text' name='bio' placeholder='USER BIO'/><br>
+      <input class="form-control" type='text' name='neighbourhood_id' placeholder='NEIGHBOURHOOD'/><br>
+      <input class="btn btn-default"  type='submit' value='sign up'/>
+    </form>
+  </div>
