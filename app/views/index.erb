@@ -1,16 +1,16 @@
     <div class="container">
-    <div>
-      <ul>
-        <li class="login_button"><a>Login</a></li>
-        <li class="signup_button"><a>SignUp</a></li>
-      </ul>
-    </div>
-    <br>
+      <div>
+        <ul>
+          <li class="login_button"><a>Login</a></li>
+          <li class="signup_button"><a>SignUp</a></li>
+        </ul>
+      </div>
+      <br>
 
 
       <div class="well">
         <% @neighbourhoods.each do |neighbourhood| %>
-        <%= neighbourhood.name %><br>
+        <a href="/neighbourhoods/<%= neighbourhood.id%>"><%= neighbourhood.name %></a><br>
         <% end %>
       </div>
 
