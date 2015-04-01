@@ -1,0 +1,22 @@
+  <div class="comments">
+    <table style="width:100%;">
+      <tr>
+        <% @user_comments.each do |comment| %>
+        <td><a class="comment_title" href="/comments/<%= comment.id%>"><%= comment.title %></a></td>
+        <td><a class="btn btn-default" id='edit_button' role="button">Edit</a></td>
+        <td><form action="/comments/<%= comment.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input class="btn btn-default" type="submit" value="Delete">
+        </form>
+      </td>
+      <td><form id='edit_form' action='/comments/<%= comment.id %>' method='post'>
+        <input type='hidden' name='_method' value='put' />
+        <input class="form-control" type='text' placeholder='<%= comment.title %>' name='title' value="<%= comment.title %>" />
+        <input class="form-control" type='text' placeholder='<%= comment.content %>' name='content' value="<%= comment.content %>" />
+        <input type='submit' value='Update' />
+      </form></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
