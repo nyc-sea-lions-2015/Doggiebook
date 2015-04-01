@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+   $("#edit_button").click(function(){
+        $("#edit_form").toggle();
+    });
+
    $(".create_comment").click(function(event){
     event.preventDefault();
     $(".the_new_form").toggle();

@@ -1,0 +1,6 @@
+<form id='edit_form' action='/comments/<%= comment.id %>' method='post'>
+          <input type='hidden' name='_method' value='put' />
+          <input class="form-control" type='text' placeholder='<%= comment.title %>' name='title' value="<%= comment.title %>" />
+          <input class="form-control" type='text' placeholder='<%= comment.content %>' name='content' value="<%= comment.content %>" />
+          <input type='submit' value='Update' />
+        </form>
