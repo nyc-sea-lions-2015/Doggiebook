@@ -1,0 +1,15 @@
+  <div class="comments">
+    <table style="width:100%;">
+      <tr>
+        <% @user_comments.each do |comment| %>
+        <td><a class="comment_title" href="/comments/<%= comment.id%>"><%= comment.title %></a></td>
+        <td><a class="btn btn-default" href="">Edit</td>
+        <td><form action="/comments/<%= comment.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input class="btn btn-default" type="submit" value="Delete">
+        </form>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,7 +1,20 @@
-<h1> Welcome To Your Dashboard</h1>
+<div class = "container">
+  <h1> Welcome To Your Dashboard</h1>
 
-<div>
-  <ul>
-    <li><a href="/authentication/logout"></i> Sign-out</a></li>
-  </ul>
+  <div class="well">
+    <div>
+      <a class="create_comment" href="">Post Comment</a>
+    </div>
+    <%= erb :'comments/new', :locals => {:to_user_id => @user_to_id}%>
+    <div class="the_article"></div>
+    <%= erb :'comments/all' %>
   </div>
+
+
+
+  <div>
+    <ul>
+      <li><a href="/authentication/logout"></i> Sign-out</a></li>
+    </ul>
+  </div>
+</div>
