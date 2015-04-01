@@ -1,27 +1,42 @@
-<div class="container" style="margin-top: 20px">
-  <div class="row panel">
-    <div class="col-md-4 bg_blur ">
-      <a href="#" class="follow_btn hidden-xs">Follow</a>
+
+<div class="container" style="margin-top: 55px">
+  <div class="well">
+    <div class="row panel">
+      <div class="col-md-4 bg_blur ">
+        <a href="#" class="follow_btn hidden-xs">Follow</a>
+      </div>
+      <div class="col-md-8  col-xs-12">
+       <img src="../../<%=@user.url%>" class="img-thumbnail picture hidden-xs" />
+       <div class="header">
+        <h1><%= @user.handle %></h1>
+        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
+        <span><%= @user.bio %></span>
+      </div>
     </div>
-    <div class="col-md-8  col-xs-12">
-     <img src="../../<%=@user.url%>" class="img-thumbnail picture hidden-xs" />
-     <div class="header">
-      <h1><%= @user.handle %></h1>
-      <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-      <span><%= @user.bio %></span>
+  </div>
+</div>
+</div>
+
+
+<div>
+  <div class="container">
+    <div class="well">
+      <a class="create_comment" href="">Post Comment</a>
+      <%= erb :'comments/new', :locals => {:to_user_id => @user_to_id}%>
+      <div class="the_article"></div>
+      <%= erb :'comments/all' %>
     </div>
   </div>
 </div>
 
 
-<div class="well">
-  <div>
-    <a class="create_comment" href="">Post Comment</a>
+
+<div class="container">
+  <div class="well">
+    <% @neighbourhoods.each do |neighbourhood| %>
+    <a href="/neighbourhoods/<%= neighbourhood.id%>"><%= neighbourhood.name %></a><br>
+    <% end %>
   </div>
-  <%= erb :'comments/new', :locals => {:to_user_id => @user_to_id}%>
-  <div class="the_article"></div>
-  <%= erb :'comments/all' %>
-</div>
 </div>
 
 
