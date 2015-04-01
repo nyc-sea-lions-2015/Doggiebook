@@ -103,3 +103,12 @@ background-color: #F1F1F1;
     width: 33.3%;
 
 }
+
+.intro-header {
+    padding-top: 900px;
+    padding-bottom: 50px;
+    text-align: center;
+    /*color: #f8f8f8;*/
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
