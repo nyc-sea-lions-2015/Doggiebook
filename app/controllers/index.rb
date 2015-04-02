@@ -1,4 +1,3 @@
 get '/' do
-  @neighbourhoods = Neighbourhood.all
-  erb :'index'
+  redirect '/neighborhoods'
 end

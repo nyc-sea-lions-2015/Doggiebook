@@ -61,9 +61,4 @@ $(document).ready(function() {
     });
   });
 
-
-
-
-
-
 }); //ends the documant.ready

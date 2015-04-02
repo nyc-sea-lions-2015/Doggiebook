@@ -1,10 +1,10 @@
 <div class="container" style="margin-top: 55px">
-  <div class="well">
-<h1> These are the profiles in your Neighbourhoods </h1>
-<div>
-<% @neighbourhood_profiles.each do |profile| %>
-<a href="/users/<%= profile.id%>"><%= profile.handle %></a>
-<% end %>
-</div>
+<div class="well">
+  <h1> These are the profiles in your Neighbourhoods </h1>
+  <div>
+    <% @neighbourhood_profiles.each do |profile| %>
+      <a href="/users/<%= profile.id%>"><%= profile.handle %></a>
+    <% end %>
+  </div>
 </div>
 </div>
